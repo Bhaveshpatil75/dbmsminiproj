@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ article.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container article-detail">
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.content }}</p>
+        <p><strong>Created at:</strong> {{ article.createdOn }}</p>
+        <p><strong>Owner</strong> {{ article.owner }}</p>
+        <div class="actions">
+        <a href="{% url 'update' article.pk %}">Edit</a>
+        <a href="{% url 'delete' article.pk %}">Delete</a>
+        <a href="{% url 'articleList' %}">Back</a>
+        </div>
+    </div>
+</body>
+</html>
+
