@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% if form.instance.pk %}Edit{% else %}New Article{% endif %}</title>
+    <title>{% if form.instance.pk %}Edit{% else %}New Employee{% endif %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
     <div class="container">
-        <h1>{% if form.instance.pk %}Edit Article{% else %}New Article{% endif %}</h1>
+        <h1>{% if form.instance.pk %}Edit Employee{% else %}New Employee{% endif %}</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}

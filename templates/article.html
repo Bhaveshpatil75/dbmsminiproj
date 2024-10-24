@@ -2,15 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ article.title }}</title>
+    <title>{{ article.name }}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
     <div class="container article-detail">
-        <h1>{{ article.title }}</h1>
-        <p>{{ article.content }}</p>
-        <p><strong>Created at:</strong> {{ article.createdOn }}</p>
-        <p><strong>Owner</strong> {{ article.owner }}</p>
+        <h1>{{ article.name }}</h1>
+        <p>{{ article.description }}</p>
+        <p><strong>Joined Date:</strong> {{ article.joinedon }}</p>
+        <p><strong>Department</strong> {{ article.department }}</p>
         <div class="actions">
         <a href="{% url 'update' article.pk %}">Edit</a>
         <a href="{% url 'delete' article.pk %}">Delete</a>
